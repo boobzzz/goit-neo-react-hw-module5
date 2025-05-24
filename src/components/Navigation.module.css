@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    gap: 32px;
+    padding: 20px;
+    border-bottom: 1px solid #535bf2;
+}
+
+.container a {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.link {
+    color: #213547;
+}
+
+.active {
+    color: #535bf2;
+}
