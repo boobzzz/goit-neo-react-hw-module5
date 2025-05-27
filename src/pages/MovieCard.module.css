@@ -1,0 +1,67 @@
+.container {
+    padding: 20px 0;
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: #213547;
+    cursor: pointer;
+}
+
+.backBtn svg {
+    width: 24px;
+    height: 24px;
+    color: #535bf2;
+}
+
+.backBtn:hover {
+    border: 1px solid #535bf2;
+    background-color: #1a1a1a;
+}
+
+.mainInfo {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.poster {}
+
+.title {
+    margin: 10px 0;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.container h3,
+.container h4 {
+    color: #646cff;
+}
+
+.container h4 {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.additionalInfo ul {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #213547;
+}
+
+.link {
+    font-size: 20px;
+    color: #213547;
+}
+
+.active {
+    font-weight: 800;
+    color: #535bf2;
+}

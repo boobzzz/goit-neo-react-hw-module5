@@ -1,16 +1,13 @@
 .container {
     display: flex;
     gap: 32px;
-    padding: 20px;
-    border-bottom: 1px solid #535bf2;
-}
-
-.container a {
-    font-weight: 800;
-    font-size: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #213547;
 }
 
 .link {
+    font-weight: 800;
+    font-size: 20px;
     color: #213547;
 }
 

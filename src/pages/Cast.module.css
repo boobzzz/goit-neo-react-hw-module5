@@ -1,0 +1,33 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.container li {
+    display: flex;
+    gap: 20px;
+}
+
+.image {
+    width: 120px;
+    height: 160px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container p {
+    margin: 0;
+    font-size: 20px;
+    color: #888;
+}
+
+.container span {
+    font-weight: 800;
+    color: #646cff;
+}

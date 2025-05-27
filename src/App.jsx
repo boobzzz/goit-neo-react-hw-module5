@@ -3,6 +3,8 @@ import Navigation from './components/Navigation.jsx';
 import Home from './pages/Home.jsx';
 import Movies from './pages/Movies.jsx';
 import MovieCard from './pages/MovieCard.jsx';
+import Cast from './pages/Cast.jsx';
+import Reviews from './pages/Reviews.jsx';
 import NotFound from './pages/NotFound.jsx';
 import './App.css';
 
@@ -17,8 +19,8 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/movies" element={<Movies />} />
                     <Route path="/movies/:movieId" element={<MovieCard />}>
-                        <Route path="cast" element={<Home />} />
-                        <Route path="reviews" element={<Home />} />
+                        <Route path="cast" element={<Cast />} />
+                        <Route path="reviews" element={<Reviews />} />
                     </Route>
                     <Route path="*" element={<NotFound />} />
                 </Routes>
