@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Loader from '../components/Loader.jsx';
 import ErrorMessage from '../components/ErrorMessage.jsx';
-import css from './Reviews.module.css';
+import css from './MovieReviews.module.css';
 
-export default function Reviews() {
+export default function MovieReviews() {
     const [ reviewsList, setReviewsList ] = useState([]);
     const [ loading, setLoading ] = useState(false);
     const [ error, setError ] = useState('');

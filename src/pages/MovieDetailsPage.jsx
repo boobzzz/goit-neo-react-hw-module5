@@ -6,13 +6,13 @@ import { FaAngleLeft } from 'react-icons/fa6';
 import Loader from '../components/Loader.jsx';
 import ErrorMessage from '../components/ErrorMessage.jsx';
 import clsx from 'clsx';
-import css from './MovieCard.module.css';
+import css from './MovieDetailsPage.module.css';
 
 const linkClass = ({ isActive }) => {
     return clsx(css.link, isActive && css.active);
 };
 
-export default function MovieCard() {
+export default function MovieDetailsPage() {
     const [ movieDetails, setMovieDetails ] = useState(null);
     const [ loading, setLoading ] = useState(false);
     const [ error, setError ] = useState('');

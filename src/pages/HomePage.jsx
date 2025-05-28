@@ -4,7 +4,7 @@ import MovieList from '../components/MovieList.jsx';
 import Loader from '../components/Loader.jsx';
 import ErrorMessage from '../components/ErrorMessage.jsx';
 
-export default function Home() {
+export default function HomePage() {
     const [ movieList, setMovieList ] = useState([]);
     const [ loading, setLoading ] = useState(false);
     const [ error, setError ] = useState('');

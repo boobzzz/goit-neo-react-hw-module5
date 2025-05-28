@@ -1,15 +1,18 @@
 import { searchMovies } from '../services/api.js';
+import { useSearchParams } from 'react-router-dom';
 import { useState } from 'react';
 import MovieList from '../components/MovieList.jsx';
 import Loader from '../components/Loader.jsx';
 import ErrorMessage from '../components/ErrorMessage.jsx';
 import toast, { Toaster } from 'react-hot-toast';
-import css from './Movies.module.css';
+import css from './MoviesPage.module.css';
 
-export default function Movies() {
+export default function MoviesPage() {
     const [ movieList, setMovieList ] = useState([]);
     const [ loading, setLoading ] = useState(false);
     const [ error, setError ] = useState('');
+
+    const [searchParams, setSearchParams] = useSearchParams();
 
     async function getMovies(query) {
         try {
@@ -27,12 +30,19 @@ export default function Movies() {
         }
     }
 
+    const updateSearchParams = (value) => {
+        const updatedParams = new URLSearchParams(searchParams);
+        updatedParams.set('query', value);
+        setSearchParams(updatedParams);
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const form = e.target;
         const { search } = form.elements;
 
         await getMovies(search.value);
+        updateSearchParams(search.value);
 
         form.reset();
     };

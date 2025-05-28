@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import Loader from '../components/Loader.jsx';
 import ErrorMessage from '../components/ErrorMessage.jsx';
 import noImage from '../assets/img/no-image.png';
-import css from './Cast.module.css';
+import css from './MovieCast.module.css';
 
-export default function Cast() {
+export default function MovieCast() {
     const [ castList, setCastList ] = useState([]);
     const [ loading, setLoading ] = useState(false);
     const [ error, setError ] = useState('');
