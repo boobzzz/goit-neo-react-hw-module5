@@ -31,21 +31,19 @@ export default function Reviews() {
 
     return (
         <>
-            {
-                reviewsList.length > 0
-                    ? <ul className={css.container}>
-                        {reviewsList.map(review => (
-                            <li
-                                key={review.id}
-                                className={css.item}
-                            >
-                                <h4>{review.author}</h4>
-                                <p>{review.content}</p>
-                            </li>
-                        ))}
-                    </ul>
-                    : <p>No reviews found</p>
-            }
+            {reviewsList.length > 0
+                ? <ul className={css.container}>
+                    {reviewsList.map(review => (
+                        <li
+                            key={review.id}
+                            className={css.item}
+                        >
+                            <h4>{review.author}</h4>
+                            <p>{review.content}</p>
+                        </li>
+                    ))}
+                </ul>
+                : <p>No reviews found</p>}
             {loading && <Loader />}
             {error && <ErrorMessage message={error} />}
         </>

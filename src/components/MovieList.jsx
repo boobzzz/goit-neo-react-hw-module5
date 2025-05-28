@@ -10,7 +10,7 @@ export default function MovieList({ list }) {
             {list.map(movie => (
                 <li key={movie.id} className={css.item}>
                     <Link
-                        to={`movies/${movie.id}`}
+                        to={`/movies/${movie.id}`}
                         state={location}
                     >
                         {movie.title}
