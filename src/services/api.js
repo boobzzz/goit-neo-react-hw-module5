@@ -8,13 +8,18 @@ export const defaultPoster =
 axios.defaults.headers.common['Authorization'] = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MmRkNjVlOGZhMjQ3ZmFlMmVjZjc5YTk3ZjU0YmQ0YSIsIm5iZiI6MTU3NjQyODA0Ny4wMDQsInN1YiI6IjVkZjY2MjBmMGQxZTdmMDAxNTcxZjEyNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nD3K3WiXnZFk8Zsnxm0T9NyUbbOuwWdus_U6xK8KhDk';
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 
-export const fetchMovies = async (query, page) => {
-    const response = await axios.get('/trending/movie/day', {
-        params: {
-            query: query,
-            page: page,
-            per_page: 20
-        },
-    });
+// export const fetchMovies = async (query, page) => {
+//     const response = await axios.get('/trending/movie/day', {
+//         params: {
+//             query: query,
+//             page: page,
+//             per_page: 20
+//         },
+//     });
+//     return response.data.results;
+// };
+
+export const fetchMovies = async () => {
+    const response = await axios.get('/trending/movie/day');
     return response.data.results;
 };
