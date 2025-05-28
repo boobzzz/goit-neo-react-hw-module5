@@ -23,3 +23,8 @@ export const fetchMovies = async () => {
     const response = await axios.get('/trending/movie/day');
     return response.data.results;
 };
+
+export const fetchMovieDetails = async (movieId) => {
+    const response = await axios.get(`/movie/${movieId}`);
+    return response.data;
+};

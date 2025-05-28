@@ -11,6 +11,7 @@ export default function Home() {
 
     async function getMovies() {
         try {
+            setError('');
             setLoading(true);
             const movies = await fetchMovies();
             setMovieList(movies);
