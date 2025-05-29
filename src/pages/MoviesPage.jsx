@@ -1,6 +1,6 @@
 import { searchMovies } from '../services/api.js';
 import { useSearchParams } from 'react-router-dom';
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import MovieList from '../components/MovieList.jsx';
 import Loader from '../components/Loader.jsx';
 import ErrorMessage from '../components/ErrorMessage.jsx';
@@ -29,18 +29,12 @@ export default function MoviesPage() {
         }
     }
 
-    const updateSearchParams = (value) => {
-        const updatedParams = new URLSearchParams(searchParams);
-        updatedParams.set(PARAMS_KEY, value);
-        setSearchParams(updatedParams);
-    };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const form = e.target;
         const { search } = form.elements;
 
-        updateSearchParams(search.value);
+        setSearchParams({ [PARAMS_KEY]: search.value });
 
         form.reset();
     };
