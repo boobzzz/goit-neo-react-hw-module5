@@ -33,8 +33,11 @@ export default function MovieCast() {
     }
 
     useEffect(() => {
-        getMovieCast();
-    }, []);
+        const getData = async () => {
+            await getMovieCast();
+        };
+        getData();
+    }, [movieId]);
 
     return (
         <>

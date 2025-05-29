@@ -26,8 +26,11 @@ export default function MovieReviews() {
     }
 
     useEffect(() => {
-        getMovieReviews();
-    }, []);
+        const getData = async () => {
+            await getMovieReviews();
+        };
+        getData();
+    }, [movieId]);
 
     return (
         <>

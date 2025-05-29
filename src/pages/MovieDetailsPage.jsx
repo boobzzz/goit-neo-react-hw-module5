@@ -55,8 +55,11 @@ export default function MovieDetailsPage() {
     }
 
     useEffect(() => {
-        getMovieDetails();
-    }, []);
+        const getData = async () => {
+            await getMovieDetails();
+        };
+        getData();
+    }, [movieId]);
 
     return (
         <>
